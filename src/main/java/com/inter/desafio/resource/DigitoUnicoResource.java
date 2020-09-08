@@ -53,7 +53,7 @@ public class DigitoUnicoResource {
 		
 	@PostMapping
 	@ApiOperation(value="Calcula dígito único de um inteiro")
-	@Cacheable(value = "digitoUnico", cacheManager="10" )  
+	@Cacheable(value = "digitoUnico")  
 	public ResponseEntity<DigitoUnico> calcularDigitoUnico(@Valid @RequestBody WrapRequestBody wrapRequestBody, HttpServletResponse response){		
 		DigitoUnico digUnSalvo = new DigitoUnico();
 		DigitoUnico tempDigUnico = new DigitoUnico(wrapRequestBody.getNumeroRepeticao(),wrapRequestBody.getPalavra());
