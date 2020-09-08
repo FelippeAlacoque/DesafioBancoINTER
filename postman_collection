@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "13af5139-a8e3-4cc8-9c2a-766b692c593c",
+		"name": "Banco INTER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calcular dígito único",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "   {\r\n        \"numeroRepeticao\":4,\r\n        \"palavra\": \"589\",\r\n        \"idUsuario\":1\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/digito_unico",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"digito_unico"
+					]
+				},
+				"description": "Calcula o dígito único de um número passado e da quantidade de repetições definida"
+			},
+			"response": []
+		},
+		{
+			"name": "Salvar usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Felippe Augusto Alacoque Rodrigues Mariano\",\r\n    \"email\":\"felippealacoque@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario"
+					]
+				},
+				"description": "Calcula o dígito único de um número passado e da quantidade de repetições definida"
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir usuário",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"id\": 1,\r\n        \"nome\": \"Felippe Augusto Alacoque Rodrigues Mariano\",\r\n        \"email\": \"felippealacoque@gmail.com\",\r\n        \"digitoUnicoList\": []\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"usuario"
+					]
+				},
+				"description": "Calcula o dígito único de um número passado e da quantidade de repetições definida"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualiza dados do usuário cadastrado",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 1,\r\n        \"nome\": \"Felippe Augusto Alacoque\",\r\n        \"email\": \"felippealacoque@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario"
+					]
+				},
+				"description": "Calcula o dígito único de um número passado e da quantidade de repetições definida"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar digitos por usuário",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/digito_unico/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"digito_unico",
+						"1"
+					]
+				},
+				"description": "Calcula o dígito único de um número passado e da quantidade de repetições definida"
+			},
+			"response": []
+		},
+		{
+			"name": "Listar usuários por ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				},
+				"description": "Calcula o dígito único de um número passado e da quantidade de repetições definida"
+			},
+			"response": []
+		},
+		{
+			"name": "Criptografar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Felippe Augusto Alacoque Rodrigues Mariano\",\r\n    \"email\":\"felippealacoque@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/criptografia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"criptografia"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
